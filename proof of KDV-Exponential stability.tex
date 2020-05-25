@@ -1,0 +1,369 @@
+%% This is a LaTeX template for preparing papers for Publ. Inst. Math.; version January 2016
+%% Please delete everything begining with %% (DOUBLE %).
+
+% Submission number: 
+\documentclass[a4paper,draft]{amsproc}
+\usepackage{amssymb}
+\usepackage[hyphens]{url} \urlstyle{same}
+%\usepackage[dvips]{graphicx} %% Package for inserting illustrations/figures
+\usepackage{amsthm}% proof can be used
+%% The following packages are useful (you may want to use them):
+%\usepackage{refcheck} %% Checks whether enumerated equations are referred to or not.
+                       %% Please remove unnecessary numbers.
+%\usepackage{cmdtrack} %% Checks whether all author defined macros are used or not
+                       %% (see the end of .log file); unused ones should be removed.
+%% Both packages have limitations---consult the package documentation.
+
+\theoremstyle{plain}
+ \newtheorem{thm}{Theorem}[section]
+ \newtheorem{prop}{Proposition}[section]
+ \newtheorem{lem}{Lemma}[section]
+ \newtheorem{cor}{Corollary}[section]
+\theoremstyle{definition}
+ \newtheorem{exm}{Example}[section]
+ \newtheorem{dfn}{Definition}[section]
+\theoremstyle{remark}
+ \newtheorem{rem}{Remark}[section]
+ \numberwithin{equation}{section}
+
+%% Please, do not change the following four lines:
+\renewcommand{\le}{\leqslant}\renewcommand{\leq}{\leqslant}
+\renewcommand{\ge}{\geqslant}\renewcommand{\geq}{\geqslant}
+\renewcommand{\setminus}{\smallsetminus}
+\setlength{\textwidth}{28cc} \setlength{\textheight}{42cc}
+
+\title[Running title / header]{None}
+
+\subjclass[2010]{Primary REQUIRED; Secondary OPTIONAL}
+
+%% Please use the newest classification -- 2010
+%% available at  http://msc2010.org/MSC-2010-server.html
+%% and the newest amsproc.cls.
+%% Please, classify to the third level,
+%% e.g., 26A and 26Axx are not satisfsctory.
+
+\keywords{optional, but desirable}
+
+\author[Hongru Zhao]{\bfseries Hongru Zhao} %% Please write ful names, avoid initials
+
+\address{ %% Put here your affiliation; street address is not required
+Department of Mathematics \\ % \hfill (Received 00 00 201?)\\
+Our University   \\ %\hfill (Revised  00 00 201?)\\
+Town\\
+Country}
+\email{user@server}
+
+%% OTHER AUTHOR(S):
+%\author[]{}
+%\address{ }
+%\email{}
+
+\thanks{Supported by ... } %% optional
+\thanks{Communicated by ...} %% This will be filled in the journal office.
+
+\begin{document}
+
+{\begin{flushleft}\baselineskip9pt\scriptsize
+%PUBLICATIONS DE L'INSTITUT MATH\'EMATIQUE\newline
+%Nouvelle s\'erie, tome ??(1??)) (201?), od--do \hfill DOI: \\
+MANUSCRIPT
+\end{flushleft}}
+\vspace{18mm} \setcounter{page}{1} \thispagestyle{empty}
+
+
+\begin{abstract}
+An abstract is REQUIRED!
+Please do not use author defined macros in the abstract
+and avoid references to anything in the paper,
+since the abstract will be detached from the article.
+\end{abstract}
+
+\maketitle
+
+\section{Section title}  %% Please avoid complex formulas in (sub)titles
+
+This template contains detailed instructions for preparing manuscripts for our journal.
+Missing to follow them may cause rejecting of the manuscript without further processing.
+So, please read both the source and compiled texts.
+
+Insert your text here. Make sure that it is written in correct English. 
+The guides \cite{TrzD,TrzE} may help you with it.
+
+If there are subsections, then you may use
+
+
+\section{Proof for Exponential stability of Semigroup}  %% Please avoid complex formulas in (sub)titles
+\subsection{Asymptotic behavior of the roots of the characteristic polynomial}
+\begin{lem} \label{key_lemma}
+Let $q_s(\lambda)= \lambda^3-is\lambda^2+\lambda+is$ be the characteristic polynomial of the $3^{rd}$ order ODE, with root ${\lambda_j=\lambda_j(s)},1\leq j\leq 3$ and let $p_s(\lambda)= (\lambda-\mu_1)(\lambda-\mu_2)(\lambda-\mu_3)$ be another polynomial, where $\mu_1=1-\frac{i}{s},\mu_2=-1-\frac{i}{s}, \mu_3=i(s+\frac{2}{s})$. 
+Then for any $ K>0, \eta \in$ $(0,2)$, there exist $M>0$ such that:  
+$|\lambda_1-\mu_1|\leq \frac{K}{|s|^{2-\eta}}$, 
+$|\lambda_2-\mu_2|\leq \frac{K}{|s|^{2-\eta}}$ and $|
+\lambda_3-\mu_3|\leq \frac{K}{|s|^{3-\eta}}$, when $ |s|>M$.
+\end{lem}
+\begin{proof}
+Fixed  $K>0, \eta \in$  n$(0,2)$, we let $\varepsilon_1=\varepsilon_2=\frac{K}{|s|^{2-\eta}},\varepsilon_3=\frac{K}{|s|^{3-\eta}}$ and let $C_j:=\{z\in\mathbb{C} :|z-\mu_j|=\varepsilon_j\},1\leq j\leq 3$. \\
+Now we are going to find a lower bound of $p_s=\lambda ^3-i s \lambda ^2+\left(1+\frac{3}{s^2}\right) \lambda+(\frac{2 i}{s^3}+\frac{3 i}{s}+i s )$ on each circle. Let $\mu_j+h\in C_j$. Then if $|s|$ is large enough, the following inequalities hold.
+\begin{displaymath}
+|p_s(\mu_1+h)|=|{h (1+h) (2+h)-\frac{3 i h (2+h)}{s}-i h (2+h) s}|\geq \dfrac{K}{|s|^{1-\eta}}=:v_1\\
+\end{displaymath}
+\begin{displaymath}
+|p_s(\mu_2+h)|=|{(-2+h) (-1+h) h-\frac{3 i (-2+h) h}{s}-i (-2+h) h s}|\geq \dfrac{K}{|s|^{1-\eta}}=:v_2\\
+\end{displaymath}
+\begin{displaymath}
+|p_s(\mu_3+h)|=|{h \left(-7+h^2\right)-\frac{9 h}{s^2}+\frac{6 i h^2}{s}+2 i h^2 s-h s^2}|\geq \dfrac{K}{2|s|^{1-\eta}}=:v_3.\\
+\end{displaymath}
+For any $z_j\in C_j$,  $|z_1|\leq 2,|z_2|\leq 2,|z_3|\leq |s|+1$ .\\
+Then there exist $M>0$, such that when $|s|>M$, 
+\begin{displaymath}
+|q_s(z_j)-p_s(z_j)|\leq\dfrac{3}{s^2}|z_j|+\dfrac{4}{|s|}<v_j\leq |p_s(z_j)|.
+\end{displaymath}
+Therefore, it follows by Rouche’s Theorem that $(q_s(\lambda)-p_s(\lambda))+p_s(\lambda)=q_s(\lambda)$ and  $p_s(\lambda)$ have the same number of zeros, counting multiplicities in the interior of $C_j$, i.e.  $|
+\lambda_j-\mu_j|\leq \varepsilon_j,j=1,2,3$.
+\end{proof}
+Since we have already proved that $A$ is a generator of a contraction semigroup and if positive number $L \not\in {\mathcal{L}}=\{L>0:-100+20 \left(k^2-k l+l^2\right) \alpha^2 +4 \left(k^2-k l+l^2\right)^2 \alpha ^4+k^2 (k-l)^2 l^2 \alpha ^6=0,\alpha =\frac{2\pi}{L},k>l>0, k,l \in \mathbb{N^+}\}$, then $(is-A)^{-1}$ exist for all $s\in {\mathbb{R}}$.\\
+Hence the only condition we need to verify for the exponential stability is that $sup_{s\in {\mathbb{R}}}||(is-A)^{-1}||$ is bounded.\\
+\linebreak
+\begin{thm}
+	If positive number $L \not\in {\mathcal{L}}$, then the semigroup is exponential stable. 
+\end{thm}
+\begin{proof}
+Suppose $||(is-A)^{-1}||$ is unbounded, which means we can find $f_n\in H^1_0$, $y_n \in \mathcal{D(A)}$, real sequence ${s_n}$, such that $(is_n-A)y_n=f_n$, $||y_n||_{H}=1$ ,$||f_n||_{H}\rightarrow 0$ and $s_n\rightarrow \infty$.\\
+First of all we are going to give an integral formula for $(is-A)^{-1}$, i.e. solve for the following boundary value problem for third order ODE. 
+\begin{equation*}
+\left\{
+\begin{array}{lr}
+y'''-isy''+y'+isy=f-f''  &  \\
+y(0)=y(L)=y'(L)=0
+\end{array}
+\right.
+\end{equation*}
+The solution is $y(t)=y_p(t)+y_h(t)$, where $y_p(t)$ is a particular solution and $y_h(t)$ is the solution to the homogeneous differential equation. 
+
+To make the notation simpler, we omit the subscript $n$. We consider $f''\in H^{-1}$. \\
+Let $q_s(\lambda)= \lambda^3-is\lambda^2+\lambda+is$ to be characteristics polynomial. Since when $s$ is big enough, by lemma \ref{key_lemma},  $q_s$ has no multiple roots, namely $\lambda_1,\ \lambda_2$ and $\lambda_3$.\\
+We will use cyclic notation for subscript, for example $\lambda_{j+3}=\lambda_j$.
+ Let the fundamental solutions to be $y_i(x)=e^{\lambda_i (x-L)}$, Wronskian to be $W(x)=(\lambda_3-\lambda_2)(\lambda_2-\lambda_1)(\lambda_3-\lambda_1)e^{is(x-L)}$,and $W_i(x)=y_{i+1}(x)y'_{i+2}(x)-y'_{i+1}(x)y_{i+2}(x)$.
+Then we can write down a formally particular solution by variation of parameters, namely:\\
+\begin{equation*} 
+	\begin{split}
+		&y^0_p(t)\\=&y_1(x)\int_{L}^{x}\frac{W_1(t)f(t)}{W(t)} d t+y_2(x)\int_{L}^{x}\frac{W_2(t)f(t)}{W(t)} d t+y_3(x)\int_{L}^{x}\frac{W_3(t)f(t)}{W(t)} d t-\\&y_1(x)\int_{L}^{x}\frac{W_1(t)}{W(t)}f''(t) d t-y_2(x)\int_{L}^{x}\frac{W_2(t)}{W(t)}f''(t) d t-y_3(x)\int_{L}^{x}\frac{W_3(t)}{W(t)}f''(t) d t\\
+		=&y_1(x)\int_{L}^{x}\frac{W_1(t)f(t)}{W(t)} d t+y_2(x)\int_{L}^{x}\frac{W_2(t)f(t)}{W(t)} d t+y_3(x)\int_{L}^{x}\frac{W_3(t)f(t)}{W(t)} d t+\\&y_1(x)\int_{L}^{x}(\frac{W_1(t)}{W(t)})'f'(t) d t+y_2(x)\int_{L}^{x}(\frac{W_2(t)}{W(t)})'f'(t) d t+y_3(x)\int_{L}^{x}(\frac{W_3(t)}{W(t)})'f'(t) d t
+		-\\&y_1(x)\frac{W_1(t)f'(t)}{W(t)} \bigg|_L^x 
+		-y_2(x)\frac{W_2(t)f'(t)}{W(t)} \bigg|_L^x
+		-y_3(x)\frac{W_3(t)f'(t)}{W(t)} \bigg|_L^x\\
+		=&y_1(x)\int_{L}^{x}\frac{W_1(t)f(t)}{W(t)} d t+y_2(x)\int_{L}^{x}\frac{W_2(t)f(t)}{W(t)} d t+y_3(x)\int_{L}^{x}\frac{W_3(t)f(t)}{W(t)} d t+\\&y_1(x)\int_{L}^{x}(\frac{W_1(t)}{W(t)})'f'(t) d t+y_2(x)\int_{L}^{x}(\frac{W_2(t)}{W(t)})'f'(t) d t+y_3(x)\int_{L}^{x}(\frac{W_3(t)}{W(t)})'f'(t) d t
+		+\\&y_1(x)\frac{W_1(L)f'(L)}{W(L)}
+		+y_2(x)\frac{W_2(L)f'(L)}{W(L)} 
+		+y_3(x)\frac{W_3(L)f'(L)}{W(L)} 
+	\end{split}
+\end{equation*}
+Since we do not have control on $f''$, we integrate by part to cancel the $f''$ term. Notice the fact that the coefficient of $f'(x)$ is zero, since $y_1(x)W_1(x)+y_2(x)W_2(x)+y_3(x)W_3(x)=0$, which comes from the determinant definition of Wronskian and Laplace expansion, and the fact that $y_1(x)\frac{W_1(L)f'(L)}{W(L)}+y_2(x)\frac{W_2(L)f'(L)}{W(L)} +y_3(x)\frac{W_3(L)f'(L)}{W(L)}$ is a solutions to the homogeneous differential equation. Hence we obtain another particular solution as following.
+\begin{equation*}
+\begin{split}
+y_p(t)&=y_1(x)\int_{L}^{x}\frac{W_1(t)f(t)}{W(t)} d t+y_2(x)\int_{L}^{x}\frac{W_2(t)f(t)}{W(t)} d t+y_3(x)\int_{L}^{x}\frac{W_3(t)f(t)}{W(t)} d t+\\&y_1(x)\int_{L}^{x}(\frac{W_1(t)}{W(t)})'f'(t) d t+y_2(x)\int_{L}^{x}(\frac{W_2(t)}{W(t)})'f'(t) d t+y_3(x)\int_{L}^{x}(\frac{W_3(t)}{W(t)})'f'(t) d t
+\end{split}
+\end{equation*}
+One can easily verify that this new particular solution satisfies $\langle \phi, q_s(D)y_p\rangle=\langle \phi,f-f''\rangle$ in the sense of distribution, where for all $\phi \in C^{\infty}$ and for all $\phi \in H_0^1(0,L)$.\\
+Now let's consider homogeneous equation with boundary condition. 
+\begin{equation*}
+\left\{
+\begin{array}{lr}
+y_h'''-isy_h''+y'+isy_h=0  &  \\
+y_h(0)+y_p(0)=0,y_h(L)+y_p(L)=0,y_h'(L)+y_p'(L)=0
+\end{array}
+\right.
+\end{equation*}
+Let $y_h(x)=c_1y_1(x)+c_2y_2(x)+c_3y_3(x)$.\\
+On the one hand it is easy to see that $y_p(L)=0$, on the other hand $y_p(L)=0$ comes from $y_1(x)W_1(x)+y_2(x)W_2(x)+y_3(x)W_3(x)=0$, and
+\begin{equation*}
+\begin{split}
+&y_1(x)(\frac{W_1(x)}{W(x)})'+y_2(x)(\frac{W_2(x)}{W(x)})'+y_3(x)(\frac{W_3(x)}{W(x)})'\\
+=&(y_1(x)\frac{W_1(x)}{W(x)}+y_2(x)\frac{W_2(x)}{W(x)}+y_3(x)\frac{W_3(x)}{W(x)})'
+-\frac{y_1'(x)W_1(x)+y_2'(x)W_2(x)+y_3'(x)W_3(x)}{W(x)}\\
+=&(\dfrac{W(x)}{W(x)})'-\frac{0}{W(x)}=0
+\end{split}
+\end{equation*}
+Then we could set up a linear equation. 
+\begin{equation*} 
+\begin{split}
+\begin{bmatrix} 1 & 1 &1 \\ \lambda_1 & \lambda_2 & \lambda_3 \\ e^{-\lambda_1 L}&e^{-\lambda_2L}&e^{-\lambda_3 L} \end{bmatrix} 
+\begin{bmatrix} c_1\\c_2\\c_3 \end{bmatrix} =\begin{bmatrix} 0\\0\\-y_p(0) \end{bmatrix}
+\end{split}
+\end{equation*}
+Let $D_s$ represents the determinant of this matrix. 
+Then
+\begin{equation*}
+D_s= (e^{-L \lambda _2}-e^{-L \lambda _3}) \lambda _1+(e^{-L \lambda _3}-e^{-L \lambda _1}) \lambda _2+(e^{-L \lambda_1}-e^{-L \lambda _2}) \lambda _3
+\end{equation*}
+Using lemma, we know that \\
+\begin{equation*} 
+\begin{split}
+ |D_s| &\geq |(e^{-L \lambda_1}-e^{-L \lambda _2}) \lambda _3|-| (e^{-L \lambda _2}-e^{-L \lambda _3}) \lambda _1|-|(e^{-L \lambda _3}-e^{-L \lambda _1}) \lambda _2|\\
+ &\geq \dfrac{e^L-e^{-L}}{2}|s|-4(e^L+e^{-L})>0,\\
+\end{split}
+\end{equation*}
+ when s is big enough. Hence when $n$ is big enough, the solution of homogeneous equation with such boundary condition always exist and unique. Now we can solve for the coefficient, namely:\\
+ \begin{displaymath}
+c_1=\frac{(\lambda_2-\lambda_3)y_p(0)}{Ds},c_2=\frac{(\lambda_3-\lambda_1)y_p(0)}{Ds},c_3=\frac{(\lambda_1-\lambda_2)y_p(0)}{Ds}.
+\end{displaymath}
+Then we get $(is-A)^{-1}[f](x)=y_h(x)+y_p(x)$ is the solution for ODE.\\
+Secondly, we will write down the $y_p(x)$ again, trying to find uniform bound for it.
+\begin{displaymath}
+\begin{aligned}
+y_p(x)=&e^{(-L+x) \lambda
+		_1} \int_L^x \frac{e^{(-L+t) \left(-i s+\lambda _2+\lambda _3\right)} f(t)}{\left(-\lambda _1+\lambda _2\right) \left(\lambda _1-\lambda _3\right)}\, dt+\\
+&{e^{(-L+x) \lambda _2} \int_L^x \frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _3\right)} f(t)}{\left(\lambda _1-\lambda _2\right) \left(\lambda
+		_2-\lambda _3\right)} \, dt+}\\
+	&{e^{(-L+x) \lambda _3} \int_L^x \frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _2\right)} f(t)}{\left(\lambda _1-\lambda
+		_3\right) \left(-\lambda _2+\lambda _3\right)} \, dt+}\\
+&{e^{(-L+x) \lambda _3} \int_L^x -\frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _2\right)} \left(-i s+\lambda _1+\lambda _2\right) f'(t)}{\left(\lambda
+		_1-\lambda _3\right) \left(\lambda _2-\lambda _3\right)} \, dt+}\\
+&{e^{(-L+x) \lambda _2} \int_L^x -\frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _3\right)} \left(-i s+\lambda _1+\lambda _3\right) f'(t)}{\left(\lambda
+		_1-\lambda _2\right) \left(-\lambda _2+\lambda _3\right)} \, dt+}\\
+&{e^{(-L+x) \lambda _1} \int_L^x -\frac{e^{(-L+t) \left(-i s+\lambda _2+\lambda _3\right)} \left(-i s+\lambda _2+\lambda _3\right) f'(t)}{\left(\lambda
+		_1-\lambda _2\right) \left(\lambda _1-\lambda _3\right)} \, dt}.
+\end{aligned}
+\end{displaymath}
+Using lemma \ref{key_lemma} again, we know $\lambda _1,\lambda _2$, Re$ \lambda _3$ are bounded , $\lambda _3-{is}\rightarrow0$ and $|\lambda _1-\lambda _2|>1$, when $s$ is large enough. Detailedly, $e^{(-L+x) \lambda_i}$, $e^{(-L+t) (is-\lambda_i-\lambda_{i+1})}$, $|-i s+\lambda_{1}+\lambda_{3}|$, $|-i s+\lambda_{2}+\lambda_{3}|$ and $|\frac{1}{\lambda_2-\lambda_1}|$ are bounded uniformly respect to large enough $s$$ $  $ $, as well as $|{\lambda_3-\lambda_1}|\sim |{\lambda_3-\lambda_2}|\sim|{-is+\lambda_1+\lambda_2}|\sim |s|$ have the same order.
+Then we know the following inequality holds, by simply using Hölder's inequality.
+\begin{equation}\label{yp-bounded}
+	|s\cdot  y_p(x)|\leq M ||f||_H
+\end{equation}
+\begin{equation}\label{yp-equi}
+	|y_p(x)-y_p(y)|\leq M_s |x-y| \cdot  ||f||_H 
+\end{equation}
+\begin{equation}\label{yp-norm}
+	||y_p||_{L_2}\leq M ||f||_H  
+\end{equation}
+where M is a constant independent of $s$ and $x$, $M_s$ is a constant maybe depend on $s$ but independent of $x$. (\ref{yp-equi}) holds for fixed $s$ since the product of two lipschitz and uniformly bounded functions is still lipschitz and uniformly bounded.\\
+A special case is that $|y_p(0)|\leq M ||f||_H$, which lead to\\ 
+\begin{displaymath}
+\begin{aligned}
+&|c_j|\leq \frac{M  ||f||_H}{|s|},\\
+&|\lambda_jc_j|\leq \frac{M  ||f||_H}{|s|},
+\end{aligned}
+\end{displaymath}
+by using lemma \ref{key_lemma} and the lower bound of $|D_s|$.  \\
+Hence 
+\begin{equation}\label{yh-bounded}
+|y_h(x)|\leq\dfrac{ M ||f||_H}{|s|}
+\end{equation}
+\begin{equation}\label{yh'-bounded}
+|y'_h(x)|\leq \dfrac{ M ||f||_H}{|s|}
+\end{equation}
+\begin{equation}\label{yh-norm}
+||y_h||_{H}\leq \dfrac{ M ||f||_H}{|s|}.
+\end{equation}
+Next let's write down $y'_p(x)$, 
+\begin{displaymath}
+\begin{aligned}
+y'_p(x)=&\lambda
+_1e^{(-L+x) \lambda
+	_1} \int_L^x \frac{e^{(-L+t) \left(-i s+\lambda _2+\lambda _3\right)} f(t)}{\left(-\lambda _1+\lambda _2\right) \left(\lambda _1-\lambda _3\right)}\, dt+\\
+&\lambda
+_2{e^{(-L+x) \lambda _2} \int_L^x \frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _3\right)} f(t)}{\left(\lambda _1-\lambda _2\right) \left(\lambda
+		_2-\lambda _3\right)} \, dt+}\\
+&\lambda
+_3{e^{(-L+x) \lambda _3} \int_L^x \frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _2\right)} f(t)}{\left(\lambda _1-\lambda
+		_3\right) \left(-\lambda _2+\lambda _3\right)} \, dt+}\\
+&\lambda
+_3{e^{(-L+x) \lambda _3} \int_L^x -\frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _2\right)} \left(-i s+\lambda _1+\lambda _2\right) f'(t)}{\left(\lambda
+		_1-\lambda _3\right) \left(\lambda _2-\lambda _3\right)} \, dt+}\\
+&\lambda
+_2{e^{(-L+x) \lambda _2} \int_L^x -\frac{e^{(-L+t) \left(-i s+\lambda _1+\lambda _3\right)} \left(-i s+\lambda _1+\lambda _3\right) f'(t)}{\left(\lambda
+		_1-\lambda _2\right) \left(-\lambda _2+\lambda _3\right)} \, dt+}\\
+&\lambda
+_1{e^{(-L+x) \lambda _1} \int_L^x -\frac{e^{(-L+t) \left(-i s+\lambda _2+\lambda _3\right)} \left(-i s+\lambda _2+\lambda _3\right) f'(t)}{\left(\lambda
+		_1-\lambda _2\right) \left(\lambda _1-\lambda _3\right)} \, dt}.
+\end{aligned}
+\end{displaymath}
+Using the same skill, we know that 
+\begin{equation}\label{yp'-bounded}
+|y'_p(x)|\leq M ||f||_H
+\end{equation}
+\begin{equation}\label{yp'-equi}
+|y'_p(x)-y'_p(y)|\leq M_s |x-y| \cdot  ||f||_H
+\end{equation}
+\begin{equation}\label{yp'-norm}
+||y'_p||_{L_2}\leq M ||f||_H.
+\end{equation}
+Now we combine our conclusions (\ref{yp-norm}),(\ref{yh-norm}),(\ref{yp'-norm}) and assumption $||f_n||_{H}\rightarrow 0$, we obtain $||y_n||_{H}\leq M ||f_n||_H\rightarrow0$. However, $||y_n||_H=1$ is a contradiction. \\
+Using theorem, we obtain exponential stability of Semigroup.
+\end{proof}
+\begin{rem}
+ When $s=0$, we can solve for determinant $D_0=2i(cos(L)-1)\neq 0$, and get $L\neq 2k\pi ,k\in \mathbb{N^+}$, since $y, y'$ are both uniformly bounded (\ref{yp-bounded}),(\ref{yh-bounded}),(\ref{yh'-bounded}),(\ref{yp'-bounded}) and  equicontinuous (\ref{yp-equi}),(\ref{yp'-equi}), by Arzelà–Ascoli theorem, we can find subsequence convergent uniformly, which implies $A^{-1}$ is compact operator.
+\end{rem}
+\begin{rem}
+If positive number $L \not\in \cup_{k>l>0}[\dfrac{2\pi\sqrt{k^2-kl+l^2}}{\sqrt{c}},\dfrac{2\pi\sqrt{k^2-kl+l^2}}{\sqrt{3}}]$, where $c=\dfrac{5(\sqrt{5}-1)}{2}\approx 3.09017$, then the semigroup is exponential stable.
+\end{rem}
+\begin{figure}[htb]
+%\includegraphisc[width=99mm]{filename.eps}
+\caption{}
+\label{some label}
+\end{figure}
+
+Besides the standard handbooks on \LaTeX\ \cite{Gr,Lmp,Lbible},
+please consult the short and useful guide \cite{TrzG}.
+
+
+\section{List of references}
+
+The list of references should be written as below.
+
+Only \emph{standard} abbreviations for names of journals and other serials
+should be used (see \url{http://zbmath.org/journals/}).
+
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{n} %% n is number of items, or the largest label
+
+\bibitem{Exm_paper} A.\,U. Thor, (not Thor, A.U.!)
+\emph{Title of paper},
+J. Math. \textbf{99} (2008), 111--222.
+
+\bibitem{Exm_in_book} A.\,U. Thor,
+\emph{Title of paper},
+in: E. Ditor (ed.), \emph{Title of Book}, Publisher, City, Year, 888--999.
+
+\bibitem{Gr} G. Gr\"atzer,
+\emph{More Math Into \LaTeX}, 4th ed.,
+Springer, 2007.
+
+\bibitem{Lmp} L. Lamport,
+\emph{\LaTeX: A Document Preparation System}, 2nd ed.,
+Addison-Wesley, 1994.
+
+\bibitem{Lbible} F. Mittelbach,  M. Goossens (with J. Braams, D. Carlisle, C. Rowley),
+\emph{The \LaTeX\ Companion}, 2nd ed.,
+Addison-Wesley, 2004.
+
+\bibitem{TrzG} J. Trzeciak, \emph{Writing mathematical papers---a few tips}, available at\\
+\url{https://www.impan.pl/wydawnictwa/dla-autorow/writing.pdf}
+
+\bibitem{TrzE} J. Trzeciak, \emph{Writing Mathematical Papers in English},
+European Mathematical Society, Zurich, 2005; a version available at
+\url{https://libgen.unblocked.zone/book/1043688}
+
+\bibitem{TrzD} J. Trzeciak, \emph{Mathematical English Usage. A Dictionary}, available at\\
+\url{http://www.impan.pl/Dictionary}
+
+\end{thebibliography}
+
+\end{document}
+
+%% To be filled in the journal office:
+
+@author:
+@affiliation:
+@title:
+@language: English
+@pages:
+@classification1:
+@classification2:
+@keywords:
+@abstract:
+@filename:
+@EOI
+
+
